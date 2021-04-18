@@ -7,7 +7,7 @@
   "module": "dist/nila.esm.js",
   "typings": "dist/index.d.ts",
   "homepage": "https://nila.vercel.app",
-  "description": "UI Components for React with TailwindCSS",
+  "description": "UI Elements for React with TailwindCSS",
   "keywords": [
     "tailwind",
     "tailwindcss",

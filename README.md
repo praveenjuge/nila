@@ -1,6 +1,6 @@
 # Nila
 
-UI Components for React with TailwindCSS
+UI Elements for React with TailwindCSS
 
 [![NPM](https://img.shields.io/npm/v/nila.svg)](https://www.npmjs.com/package/nila) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
