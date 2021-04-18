@@ -9,7 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Nothing yet!
 
-## [0.1.0] - 2021-04-18
+## [0.1.1] - 2021-04-18
 
 - New: Basic Button Component
+
+## [0.1.0] - 2021-04-18
+
 - Initial release!
