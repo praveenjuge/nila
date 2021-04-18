@@ -1,8 +1,26 @@
 {
-  "version": "0.1.1",
+  "name": "nila",
   "license": "MIT",
+  "version": "0.1.1",
+  "author": "praveenjuge",
   "main": "dist/index.js",
+  "module": "dist/nila.esm.js",
   "typings": "dist/index.d.ts",
+  "homepage": "https://nila.vercel.app",
+  "description": "UI Components for React with TailwindCSS",
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "ui-components",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenjuge/nila.git"
+  },
+  "bugs": {
+    "url": "https://github.com/praveenjuge/nila/issues"
+  },
   "files": [
     "dist",
     "src"
@@ -33,9 +51,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "nila",
-  "author": "praveenjuge",
-  "module": "dist/nila.esm.js",
   "size-limit": [
     {
       "path": "dist/nila.cjs.production.min.js",
