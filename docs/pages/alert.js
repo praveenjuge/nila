@@ -1,13 +1,21 @@
 import Code from '../components/Code';
 import PageHeader from '../components/PageHeader';
 import { Alert } from '../../dist';
+import {
+  CheckCircleIcon,
+  InformationCircleIcon,
+  XCircleIcon,
+} from '@heroicons/react/solid';
 
 export default function Alerts() {
   return (
     <>
       <PageHeader title="Alert" />
 
-      <Code title="Basic" code="<Alert>I'm an Alert</Alert>">
+      <Code
+        code="{/* Basic */}
+<Alert>I'm an Alert</Alert>"
+      >
         <Alert>
           “There is nothing in the world so irresistibly contagious as laughter
           and good humor.” ― Charles Dickens, A Christmas Carol
@@ -15,8 +23,78 @@ export default function Alerts() {
       </Code>
 
       <Code
-        title="Light Colors"
-        code='<Alert>...</Alert>
+        code='{/* Left Border */}
+<Alert variant="blue" className="border-l-4">...</Alert>'
+      >
+        <Alert variant="blue" className="border-l-4">
+          “There is nothing in the world so irresistibly contagious as laughter
+          and good humor.” ― Charles Dickens, A Christmas Carol
+        </Alert>
+      </Code>
+
+      <Code
+        code='{/* Top Border */}
+<Alert variant="pink" className="border-t-4">...</Alert>'
+      >
+        <Alert variant="pink" className="border-t-4">
+          “There is nothing in the world so irresistibly contagious as laughter
+          and good humor.” ― Charles Dickens, A Christmas Carol
+        </Alert>
+      </Code>
+
+      <Code
+        code='{/* With Icon */}
+<Alert variant="green" icon><CheckCircleIcon className="flex-shrink-0 w-5 h-5" /><span>...</span></Alert>'
+      >
+        <Alert variant="green" icon>
+          <CheckCircleIcon className="flex-shrink-0 w-5 h-5" />
+          <span>
+            “There is nothing in the world so irresistibly contagious as
+            laughter and good humor.” ― Charles Dickens, A Christmas Carol
+          </span>
+        </Alert>
+      </Code>
+
+      <Code
+        code='{/* With Close Button */}
+<Alert variant="blue" icon closable><CheckCircleIcon className="flex-shrink-0 w-5 h-5" /><span>...</span></Alert>'
+      >
+        <Alert variant="blue" icon closable>
+          <InformationCircleIcon className="flex-shrink-0 w-5 h-5" />
+          <span>
+            “Suffering has been stronger than all other teaching, and has taught
+            me to understand what your heart used to be. I have been bent and
+            broken, but - I hope - into a better shape.” ― Charles Dickens
+          </span>
+        </Alert>
+      </Code>
+
+      <Code
+        code='{/* With Link */}
+<Alert variant="yellow" icon>
+  <XCircleIcon className="flex-shrink-0 w-5 h-5" />
+  <div className="flex flex-col justify-between w-full md:items-center md:flex-row">
+    <span>...</span>
+    <a href="#" className="mt-3 underline md:mt-0">With a link</a>
+  </div></Alert>'
+      >
+        <Alert variant="yellow" icon>
+          <XCircleIcon className="flex-shrink-0 w-5 h-5" />
+          <div className="flex flex-col justify-between w-full md:items-center md:flex-row">
+            <span>
+              “You have been the last dream of my soul.” ― Charles Dickens, A
+              Tale of Two Cities
+            </span>
+            <a href="#" className="mt-3 underline md:mt-0">
+              With a link
+            </a>
+          </div>
+        </Alert>
+      </Code>
+
+      <Code
+        code='{/* Light Colors */}
+<Alert>...</Alert>
 <Alert variant="red">...</Alert>
 <Alert variant="yellow">...</Alert>
 <Alert variant="green">...</Alert>
@@ -61,8 +139,8 @@ export default function Alerts() {
       </Code>
 
       <Code
-        title="Solid Colors"
-        code='<Alert solid>...</Alert>
+        code='{/* Solid Colors */}
+<Alert solid>...</Alert>
 <Alert solid variant="red">...</Alert>
 <Alert solid variant="yellow">...</Alert>
 <Alert solid variant="green">...</Alert>

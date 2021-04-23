@@ -18,9 +18,11 @@ const CodeTag = props => {
 export default function Code(props) {
   return (
     <div className="mb-16 border rounded">
-      <h3 className="px-4 pt-3.5 text-sm font-medium text-gray-800">
-        {props.title}
-      </h3>
+      {props.title && (
+        <h3 className="px-4 pt-3.5 text-sm font-medium text-gray-800">
+          {props.title}
+        </h3>
+      )}
       <div className="flex flex-col items-end justify-start px-4 py-4 space-y-2 overflow-x-auto">
         {props.children}
       </div>
