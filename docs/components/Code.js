@@ -7,7 +7,7 @@ SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const PreTag = props => {
   return (
-    <pre className="p-4 overflow-x-auto font-mono text-sm text-gray-900 bg-gray-100 rounded-b">
+    <pre className="p-3.5 overflow-x-auto font-mono text-sm text-gray-900 bg-gray-100 rounded-b">
       {props.children}
     </pre>
   );
@@ -18,9 +18,8 @@ const CodeTag = props => {
 };
 
 const getClassName = router => {
-  console.log(router.asPath);
   if (router.asPath === '/alert') return 'flex-col space-y-2';
-  else if (router.asPath === '/avatar') return 'space-x-2 md:justify-center';
+  else return 'space-x-2 md:justify-center';
 };
 
 export default function Code(props) {

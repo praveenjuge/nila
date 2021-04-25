@@ -5,69 +5,64 @@ export default function Nila({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <div>
-          <meta charSet="utf-8" />
-          <title>Nila | UI Elements for React with Tailwind CSS</title>
-          <meta
-            property="og:title"
-            content="Nila | UI Elements for React with Tailwind CSS"
-          />
-          <meta
-            name="twitter:title"
-            content="Nila | UI Elements for React with Tailwind CSS"
-          />
-          <meta
-            itemProp="name"
-            content="Nila | UI Elements for React with Tailwind CSS"
-          />
-          <meta
-            name="application-name"
-            content="Nila | UI Elements for React with Tailwind CSS"
-          />
-          <meta property="og:site_name" content="Nila" />
-          <meta
-            name="description"
-            content="UI Elements for React with Tailwind CSS"
-          />
-          <meta
-            itemProp="description"
-            content="UI Elements for React with Tailwind CSS"
-          />
-          <meta
-            property="og:description"
-            content="UI Elements for React with Tailwind CSS"
-          />
-          <meta
-            name="twitter:description"
-            content="UI Elements for React with Tailwind CSS"
-          />
-          <meta itemProp="image" content="/images/og.png" />
-          <meta name="twitter:image:src" content="/images/og.png" />
-          <meta property="og:image" content="/images/og.png" />
-          <meta name="twitter:image" content="/images/og.png" />
-          <meta property="article:author" content="Praveen Juge" />
-          <meta property="og:article:author" content="Praveen Juge" />
-          <meta name="author" content="Praveen Juge" />
-          <meta property="og:locale" content="en" />
-          <meta name="language" content="en" />
-          <meta
-            name="keywords"
-            content="tailwind, tailwindcss, UI components"
-          />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="Nila" />
-          <meta name="twitter:creator" content="@praveenjuge" />
-          <meta name="robots" content="index,follow" />
-          <meta name="googlebot" content="index,follow" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <meta property="og:type" content="website" />
+        <meta charSet="utf-8" />
+        <title>Nila | UI Elements for React with Tailwind CSS</title>
+        <meta
+          property="og:title"
+          content="Nila | UI Elements for React with Tailwind CSS"
+        />
+        <meta
+          name="twitter:title"
+          content="Nila | UI Elements for React with Tailwind CSS"
+        />
+        <meta
+          itemProp="name"
+          content="Nila | UI Elements for React with Tailwind CSS"
+        />
+        <meta
+          name="application-name"
+          content="Nila | UI Elements for React with Tailwind CSS"
+        />
+        <meta property="og:site_name" content="Nila" />
+        <meta
+          name="description"
+          content="UI Elements for React with Tailwind CSS"
+        />
+        <meta
+          itemProp="description"
+          content="UI Elements for React with Tailwind CSS"
+        />
+        <meta
+          property="og:description"
+          content="UI Elements for React with Tailwind CSS"
+        />
+        <meta
+          name="twitter:description"
+          content="UI Elements for React with Tailwind CSS"
+        />
+        <meta itemProp="image" content="/images/og.png" />
+        <meta name="twitter:image:src" content="/images/og.png" />
+        <meta property="og:image" content="/images/og.png" />
+        <meta name="twitter:image" content="/images/og.png" />
+        <meta property="article:author" content="Praveen Juge" />
+        <meta property="og:article:author" content="Praveen Juge" />
+        <meta name="author" content="Praveen Juge" />
+        <meta property="og:locale" content="en" />
+        <meta name="language" content="en" />
+        <meta name="keywords" content="tailwind, tailwindcss, UI components" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="Nila" />
+        <meta name="twitter:creator" content="@praveenjuge" />
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta property="og:type" content="website" />
 
-          {/* Inter Font */}
-          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        </div>
+        {/* Inter Font */}
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
       <div
         aria-hidden="true"

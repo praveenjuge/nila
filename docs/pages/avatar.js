@@ -1,7 +1,6 @@
 import Code from '../components/Code';
 import PageHeader from '../components/PageHeader';
 import { Avatar } from '../../dist';
-import { CheckCircleIcon } from '@heroicons/react/solid';
 
 export default function Avatars() {
   return (
