@@ -1,12 +1,10 @@
+import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import PageHeader from '../components/PageHeader';
 import { Badge } from '../../dist';
 
 export default function Badges() {
   return (
-    <>
-      <PageHeader title="Badge" />
-
+    <ElementLayout title="Badge">
       <Code
         code="{/* Basic*/}
 <Badge>...</Badge>
@@ -71,6 +69,6 @@ export default function Badges() {
           Badge
         </Badge>
       </Code>
-    </>
+    </ElementLayout>
   );
 }

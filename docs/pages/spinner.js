@@ -1,12 +1,10 @@
 import Code from '../components/Code';
-import PageHeader from '../components/PageHeader';
 import { Spinner } from '../../dist';
+import ElementLayout from '../components/ElementLayout';
 
 export default function Spinners() {
   return (
-    <>
-      <PageHeader title="Spinner" />
-
+    <ElementLayout title="Spinner">
       <Code
         code="{/* Basic */}
 <Spinner />"
@@ -55,6 +53,6 @@ export default function Spinners() {
         <Spinner className="w-12 h-12" />
         <Spinner className="w-14 h-14" />
       </Code>
-    </>
+    </ElementLayout>
   );
 }

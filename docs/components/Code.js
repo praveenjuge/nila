@@ -7,7 +7,7 @@ SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const PreTag = props => {
   return (
-    <pre className="p-3.5 overflow-x-auto font-mono text-sm text-gray-900 bg-gray-100 rounded-b">
+    <pre className="p-4 overflow-x-auto font-mono text-sm text-gray-900 bg-gray-100 rounded-b">
       {props.children}
     </pre>
   );
@@ -25,20 +25,22 @@ const getClassName = router => {
 export default function Code(props) {
   const router = useRouter();
   return (
-    <div className="mb-16 border rounded">
+    <div className="mb-16 bg-white border rounded">
       {props.title && (
         <h3 className="px-4 pt-3.5 text-sm font-medium text-gray-800">
           {props.title}
         </h3>
       )}
-      <div
-        className={
-          'flex items-end justify-start px-4 py-4 overflow-x-auto ' +
-          getClassName(router)
-        }
-      >
-        {props.children}
-      </div>
+      {props.children && (
+        <div
+          className={
+            'flex items-end justify-start px-4 py-4 overflow-x-auto ' +
+            getClassName(router)
+          }
+        >
+          {props.children}
+        </div>
+      )}
       <SyntaxHighlighter
         language="jsx"
         style={style}

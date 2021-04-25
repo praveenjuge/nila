@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en-us" prefix="og: http://ogp.me/ns#">
         <Head />
-        <body className="min-h-screen font-sans antialiased text-gray-900 transition bg-white">
+        <body className="min-h-screen font-sans antialiased text-gray-900 transition bg-gray-50">
           <Main />
           <NextScript />
         </body>

@@ -1,12 +1,10 @@
+import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import PageHeader from '../components/PageHeader';
 import { Avatar } from '../../dist';
 
 export default function Avatars() {
   return (
-    <>
-      <PageHeader title="Avatar" />
-
+    <ElementLayout title="Avatar">
       <Code
         code='{/* Basic */}
 <Avatar />
@@ -90,6 +88,6 @@ export default function Avatars() {
         <Avatar dot="pink" size="24" rounded />
         <Avatar dot="gray" size="28" rounded />
       </Code>
-    </>
+    </ElementLayout>
   );
 }

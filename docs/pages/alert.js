@@ -1,5 +1,5 @@
+import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import PageHeader from '../components/PageHeader';
 import { Alert } from '../../dist';
 import {
   CheckCircleIcon,
@@ -9,9 +9,7 @@ import {
 
 export default function Alerts() {
   return (
-    <>
-      <PageHeader title="Alert" />
-
+    <ElementLayout title="Alert">
       <Code
         code="{/* Basic */}
 <Alert>I'm an Alert</Alert>"
@@ -183,6 +181,6 @@ export default function Alerts() {
           Charles Dickens, Our Mutual Friend
         </Alert>
       </Code>
-    </>
+    </ElementLayout>
   );
 }
