@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import style from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
@@ -15,7 +17,14 @@ const CodeTag = props => {
   return <code>{props.children}</code>;
 };
 
+const getClassName = router => {
+  console.log(router.asPath);
+  if (router.asPath === '/alert') return 'flex-col space-y-2';
+  else if (router.asPath === '/avatar') return 'space-x-2 md:justify-center';
+};
+
 export default function Code(props) {
+  const router = useRouter();
   return (
     <div className="mb-16 border rounded">
       {props.title && (
@@ -23,7 +32,12 @@ export default function Code(props) {
           {props.title}
         </h3>
       )}
-      <div className="flex flex-col items-end justify-start px-4 py-4 space-y-2 overflow-x-auto">
+      <div
+        className={
+          'flex items-end justify-start px-4 py-4 overflow-x-auto ' +
+          getClassName(router)
+        }
+      >
         {props.children}
       </div>
       <SyntaxHighlighter
