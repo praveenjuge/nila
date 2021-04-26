@@ -1,5 +1,5 @@
 import * as React from 'react';
-const classNames = (...classes: any[]) => classes.filter(Boolean).join(' ');
+import { classNames } from './Utils';
 
 export interface Props {
   className: string;

@@ -9,7 +9,7 @@ export default function ElementLayout({ title, children }) {
       </Head>
       <main className="px-4 py-5 mx-auto max-w-7xl">
         <Link href="/">
-          <a className="inline-flex items-center mb-1 text-sm text-gray-800 hover:text-blue-700">
+          <a className="inline-flex items-center mb-1 text-sm font-medium text-gray-800 hover:text-blue-700">
             <svg
               className="w-4 h-4"
               xmlns="http://www.w3.org/2000/svg"

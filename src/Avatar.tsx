@@ -1,5 +1,5 @@
 import * as React from 'react';
-const classNames = (...classes: any[]) => classes.filter(Boolean).join(' ');
+import { classNames, setRounded } from './Utils';
 
 export interface Props {
   dot: string;
@@ -19,7 +19,7 @@ const setSize = (avatarSize: string) => {
   if (avatarSize === '20') return 'w-20 h-20 text-xl';
   if (avatarSize === '24') return 'w-24 h-24 text-2xl';
   if (avatarSize === '28') return 'w-28 h-28 text-3xl';
-  else return 'w-10 h-10 text-sm';
+  return 'w-10 h-10 text-sm';
 };
 
 const setIconSize = (avatarSize: string) => {
@@ -31,7 +31,7 @@ const setIconSize = (avatarSize: string) => {
   if (avatarSize === '20') return 'w-10 h-10';
   if (avatarSize === '24') return 'w-12 h-12';
   if (avatarSize === '28') return 'w-14 h-14';
-  else return 'w-5 h-5';
+  return 'w-5 h-5';
 };
 
 const setDotSize = (avatarSize: string) => {
@@ -42,12 +42,7 @@ const setDotSize = (avatarSize: string) => {
   if (avatarSize === '20') return 'w-4 h-4 ring-4';
   if (avatarSize === '24') return 'w-5 h-5 ring-4';
   if (avatarSize === '28') return 'w-6 h-6 ring-4';
-  else return 'w-2 h-2 ring';
-};
-
-const setRounded = (rounded: boolean) => {
-  if (rounded) return 'rounded';
-  else return 'rounded-full';
+  return 'w-2 h-2 ring';
 };
 
 const setDotColor = (color: string) => {
@@ -60,7 +55,7 @@ const setDotColor = (color: string) => {
   else if (color === 'purple') return 'bg-purple-500';
   else if (color === 'pink') return 'bg-pink-500';
   else if (color === 'primary') return 'bg-primary';
-  else return '';
+  return '';
 };
 
 const renderContent = (

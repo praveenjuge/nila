@@ -6,7 +6,7 @@ export default function Badges() {
   return (
     <ElementLayout title="Badge">
       <Code
-        code="{/* Basic*/}
+        code="{/* Basic */}
 <Badge>...</Badge>
 <Badge rounded>...</Badge>"
       >

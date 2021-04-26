@@ -7,6 +7,27 @@ import {
   XCircleIcon,
 } from '@heroicons/react/solid';
 
+const withIcon = `{/* With Icon */}
+<Alert variant="green" icon>
+  <CheckCircleIcon className="flex-shrink-0 w-5 h-5" />
+  <span>...</span>
+</Alert>`;
+
+const withCloseIcon = `{/* With Close Button */}
+<Alert variant="blue" icon closable>
+  <CheckCircleIcon className="flex-shrink-0 w-5 h-5" />
+  <span>...</span>
+</Alert>`;
+
+const withLink = `{/* With Link */}
+<Alert variant="yellow" icon>
+  <XCircleIcon className="flex-shrink-0 w-5 h-5" />
+  <div className="flex flex-col justify-between w-full md:items-center md:flex-row">
+    <span>...</span>
+    <a href="#" className="mt-3 underline md:mt-0">With a link</a>
+  </div>
+</Alert>`;
+
 export default function Alerts() {
   return (
     <ElementLayout title="Alert">
@@ -22,28 +43,21 @@ export default function Alerts() {
 
       <Code
         code='{/* Left Border */}
-<Alert variant="blue" className="border-l-4">...</Alert>'
+<Alert variant="blue" className="border-l-4">...</Alert>
+{/* Top Border */}
+<Alert variant="pink" className="border-t-4">...</Alert>'
       >
         <Alert variant="blue" className="border-l-4">
           “There is nothing in the world so irresistibly contagious as laughter
           and good humor.” ― Charles Dickens, A Christmas Carol
         </Alert>
-      </Code>
-
-      <Code
-        code='{/* Top Border */}
-<Alert variant="pink" className="border-t-4">...</Alert>'
-      >
         <Alert variant="pink" className="border-t-4">
           “There is nothing in the world so irresistibly contagious as laughter
           and good humor.” ― Charles Dickens, A Christmas Carol
         </Alert>
       </Code>
 
-      <Code
-        code='{/* With Icon */}
-<Alert variant="green" icon><CheckCircleIcon className="flex-shrink-0 w-5 h-5" /><span>...</span></Alert>'
-      >
+      <Code code={withIcon}>
         <Alert variant="green" icon>
           <CheckCircleIcon className="flex-shrink-0 w-5 h-5" />
           <span>
@@ -53,10 +67,7 @@ export default function Alerts() {
         </Alert>
       </Code>
 
-      <Code
-        code='{/* With Close Button */}
-<Alert variant="blue" icon closable><CheckCircleIcon className="flex-shrink-0 w-5 h-5" /><span>...</span></Alert>'
-      >
+      <Code code={withCloseIcon}>
         <Alert variant="blue" icon closable>
           <InformationCircleIcon className="flex-shrink-0 w-5 h-5" />
           <span>
@@ -67,15 +78,7 @@ export default function Alerts() {
         </Alert>
       </Code>
 
-      <Code
-        code='{/* With Link */}
-<Alert variant="yellow" icon>
-  <XCircleIcon className="flex-shrink-0 w-5 h-5" />
-  <div className="flex flex-col justify-between w-full md:items-center md:flex-row">
-    <span>...</span>
-    <a href="#" className="mt-3 underline md:mt-0">With a link</a>
-  </div></Alert>'
-      >
+      <Code code={withLink}>
         <Alert variant="yellow" icon>
           <XCircleIcon className="flex-shrink-0 w-5 h-5" />
           <div className="flex flex-col justify-between w-full md:items-center md:flex-row">

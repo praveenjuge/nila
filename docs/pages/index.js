@@ -21,7 +21,7 @@ export default function Home() {
       </section>
 
       <main className="px-4 py-4 mx-auto max-w-7xl">
-        <section className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <section className="grid grid-cols-1 gap-5 text-sm font-medium text-gray-800 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           <Link href="/alert/">
             <a className={linkClass}>
               <span
@@ -80,17 +80,19 @@ export default function Home() {
               </span>
             </a>
           </Link>
-          <a className="flex flex-col w-full overflow-hidden text-sm font-medium text-gray-800 rounded shadow-sm opacity-25 cursor-pointer pointer-events-none">
-            <span
-              className="flex items-center justify-center transition select-none h-36"
-              aria-hidden="true"
-            >
-              <span className="bg-gray-200 group-hover:bg-gray-300 transition px-4 py-2.5 rounded-md">
-                Button
+          <Link href="/button/">
+            <a className={linkClass}>
+              <span
+                className="flex items-center justify-center transition select-none h-36"
+                aria-hidden="true"
+              >
+                <span className="bg-gray-200 group-hover:bg-gray-300 transition px-4 py-2.5 rounded-md">
+                  Button
+                </span>
               </span>
-            </span>
-          </a>
-          <a className="flex flex-col w-full overflow-hidden text-sm font-medium text-gray-800 rounded shadow-sm opacity-25 cursor-pointer pointer-events-none">
+            </a>
+          </Link>
+          <a className="flex flex-col pointer-events-none opacity-30">
             <span
               className="flex items-center justify-center transition select-none h-36"
               aria-hidden="true"
@@ -119,7 +121,7 @@ export default function Home() {
               </span>
             </span>
           </a>
-          <a className="flex flex-col w-full overflow-hidden text-sm font-medium text-gray-800 rounded shadow-sm opacity-25 cursor-pointer pointer-events-none">
+          <a className="flex flex-col pointer-events-none opacity-30">
             <span
               className="flex items-center justify-center transition select-none h-36"
               aria-hidden="true"
@@ -132,7 +134,7 @@ export default function Home() {
               </span>
             </span>
           </a>
-          <a className="flex flex-col w-full overflow-hidden text-sm font-medium text-gray-800 rounded shadow-sm opacity-25 cursor-pointer pointer-events-none">
+          <a className="flex flex-col pointer-events-none opacity-30">
             <span
               className="flex items-center justify-center transition select-none h-36"
               aria-hidden="true"
@@ -153,7 +155,7 @@ export default function Home() {
               </span>
             </span>
           </a>
-          <a className="flex flex-col w-full overflow-hidden text-sm font-medium text-gray-800 rounded shadow-sm opacity-25 cursor-pointer pointer-events-none">
+          <a className="flex flex-col pointer-events-none opacity-30">
             <span
               className="flex items-center justify-center transition select-none h-36"
               aria-hidden="true"
@@ -183,13 +185,13 @@ export default function Home() {
               >
                 <span className="flex items-center space-x-2">
                   <svg
-                    className="w-6 h-6 text-gray-700 transition group-hover:text-gray-900"
+                    className="w-6 h-6 text-gray-700 transition group-hover:text-black"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                   >
                     <circle
-                      className="opacity-25"
+                      className="transition opacity-25 group-hover:opacity-30"
                       cx={12}
                       cy={12}
                       r={10}
@@ -201,7 +203,7 @@ export default function Home() {
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     />
                   </svg>
-                  <span className="text-gray-700 transition group-hover:text-gray-800">
+                  <span className="text-gray-700 transition group-hover:text-gray-900">
                     Spinner...
                   </span>
                 </span>
