@@ -1,7 +1,6 @@
 import Link from 'next/link';
-
 const linkClass =
-  'flex flex-col w-full overflow-hidden text-sm font-medium text-gray-800 transition shadow-sm rounded cursor-pointer group focus:outline-none focus:ring focus:ring-blue-700 bg-white';
+  'flex flex-col w-full overflow-hidden transition shadow-sm rounded cursor-pointer group focus:outline-none focus:ring focus:ring-blue-700 bg-white';
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
           npm install nila --save
         </span>
       </section>
-
       <main className="px-4 py-4 mx-auto max-w-7xl">
         <section className="grid grid-cols-1 gap-5 text-sm font-medium text-gray-800 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           <Link href="/alert/">
@@ -92,91 +90,99 @@ export default function Home() {
               </span>
             </a>
           </Link>
-          <a className="flex flex-col pointer-events-none opacity-30">
-            <span
-              className="flex items-center justify-center transition select-none h-36"
-              aria-hidden="true"
-            >
-              <span className="flex items-center space-x-0.5">
-                <svg
-                  className="w-8 h-8 text-gray-300 transition group-hover:text-gray-400"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M7,5C5.897,5,5,5.897,5,7v10c0,1.103,0.897,2,2,2h10c1.103,0,2-0.897,2-2V7c0-1.103-0.897-2-2-2H7z M7,17V7h10l0.002,10H7z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10.996 12.556L9.7 11.285 8.3 12.715 11.004 15.362 15.703 10.711 14.297 9.289z"
-                  />
-                </svg>
-                <span className="text-gray-700 transition group-hover:text-gray-800">
-                  Checkbox
+          <Link href="/checkbox/">
+            <a className={linkClass}>
+              <span
+                className="flex items-center justify-center transition select-none h-36"
+                aria-hidden="true"
+              >
+                <span className="flex items-center space-x-0.5">
+                  <svg
+                    className="w-8 h-8 text-gray-300 transition group-hover:text-gray-400"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7,5C5.897,5,5,5.897,5,7v10c0,1.103,0.897,2,2,2h10c1.103,0,2-0.897,2-2V7c0-1.103-0.897-2-2-2H7z M7,17V7h10l0.002,10H7z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M10.996 12.556L9.7 11.285 8.3 12.715 11.004 15.362 15.703 10.711 14.297 9.289z"
+                    />
+                  </svg>
+                  <span className="text-gray-700 transition group-hover:text-gray-800">
+                    Checkbox
+                  </span>
                 </span>
               </span>
-            </span>
-          </a>
-          <a className="flex flex-col pointer-events-none opacity-30">
-            <span
-              className="flex items-center justify-center transition select-none h-36"
-              aria-hidden="true"
-            >
-              <span className="w-full ml-6">
-                <span className="text-gray-700 transition group-hover:text-gray-800">
-                  Input Tag
-                </span>
-                <span className="flex items-center w-full p-5 mt-1.5 space-x-2 transition border-t border-b border-l rounded-tl rounded-bl shadow-sm group-hover:border-gray-300" />
-              </span>
-            </span>
-          </a>
-          <a className="flex flex-col pointer-events-none opacity-30">
-            <span
-              className="flex items-center justify-center transition select-none h-36"
-              aria-hidden="true"
-            >
-              <span className="flex items-center space-x-0.5">
-                <svg
-                  className="w-8 h-8 text-gray-300 transition group-hover:text-gray-400"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12,5c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S15.859,5,12,5z M12,17c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5 S14.757,17,12,17z" />
-                  <path d="M12,9c-1.627,0-3,1.373-3,3s1.373,3,3,3s3-1.373,3-3S13.627,9,12,9z" />
-                </svg>
-                <span className="text-gray-700 transition group-hover:text-gray-800">
-                  Radio Button
+            </a>
+          </Link>
+          <Link href="/input/">
+            <a className={linkClass}>
+              <span
+                className="flex items-center justify-center transition select-none h-36"
+                aria-hidden="true"
+              >
+                <span className="w-full ml-6">
+                  <span className="text-gray-700 transition group-hover:text-gray-800">
+                    Input Tag
+                  </span>
+                  <span className="flex items-center w-full p-5 mt-1.5 space-x-2 transition border-t border-b border-l rounded-tl rounded-bl shadow-sm group-hover:border-gray-300" />
                 </span>
               </span>
-            </span>
-          </a>
-          <a className="flex flex-col pointer-events-none opacity-30">
-            <span
-              className="flex items-center justify-center transition select-none h-36"
-              aria-hidden="true"
-            >
-              <span className="flex items-center justify-between w-full p-3 mx-4 space-x-2 transition border rounded shadow-sm group-hover:border-gray-300">
-                <span className="ml-0.5">Select Tag</span>
-                <svg
-                  className="w-4 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+            </a>
+          </Link>
+          <Link href="/radio/">
+            <a className={linkClass}>
+              <span
+                className="flex items-center justify-center transition select-none h-36"
+                aria-hidden="true"
+              >
+                <span className="flex items-center space-x-0.5">
+                  <svg
+                    className="w-8 h-8 text-gray-300 transition group-hover:text-gray-400"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12,5c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S15.859,5,12,5z M12,17c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5 S14.757,17,12,17z" />
+                    <path d="M12,9c-1.627,0-3,1.373-3,3s1.373,3,3,3s3-1.373,3-3S13.627,9,12,9z" />
+                  </svg>
+                  <span className="text-gray-700 transition group-hover:text-gray-800">
+                    Radio Button
+                  </span>
+                </span>
               </span>
-            </span>
-          </a>
+            </a>
+          </Link>
+          <Link href="/select/">
+            <a className={linkClass}>
+              <span
+                className="flex items-center justify-center transition select-none h-36"
+                aria-hidden="true"
+              >
+                <span className="flex items-center justify-between w-full p-3 mx-4 space-x-2 transition border rounded shadow-sm group-hover:border-gray-300">
+                  <span className="ml-0.5">Select Tag</span>
+                  <svg
+                    className="w-4 h-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </a>
+          </Link>
           <Link href="/spinner/">
             <a className={linkClass}>
               <span

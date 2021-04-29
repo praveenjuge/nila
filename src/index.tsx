@@ -2,4 +2,8 @@ export { Alert } from './Alert';
 export { Avatar } from './Avatar';
 export { Badge } from './Badge';
 export { Button } from './Button';
+export { Checkbox } from './Checkbox';
+export { Input } from './Input';
+export { Radio } from './Radio';
+export { Select } from './Select';
 export { Spinner } from './Spinner';

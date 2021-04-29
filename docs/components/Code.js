@@ -19,6 +19,8 @@ const CodeTag = props => {
 
 const getClassName = router => {
   if (router.asPath === '/alert') return 'flex-col space-y-2';
+  else if (router.asPath === '/input' || router.asPath === '/select')
+    return 'flex-col max-w-md mx-auto !items-start';
   else return 'space-x-2 md:justify-center';
 };
 
