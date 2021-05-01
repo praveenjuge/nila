@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -15,5 +16,13 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    plugin(function({ addBase }) {
+      addBase({
+        '.font-type-alt': { 'font-feature-settings': '"salt"' },
+      });
+    }),
+  ],
 };

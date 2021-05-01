@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Button } from '../../dist';
 const linkClass =
   'flex flex-col w-full overflow-hidden transition shadow-sm rounded cursor-pointer group focus:outline-none focus:ring focus:ring-blue-700 bg-white';
 
@@ -14,9 +15,14 @@ export default function Home() {
           accessible, fast and easy to use. Made for React. Styled with
           TailwindCSS.
         </p>
-        <span className="inline-flex px-4 py-3 mt-3.5 font-mono text-sm text-gray-600 border rounded border-gray-100 bg-white">
+        <span className="inline-flex px-4 py-2.5 mt-3.5 font-mono text-sm text-gray-600 border rounded border-gray-200 bg-white mr-1">
           npm install nila --save
         </span>
+        <Link href="/installation/">
+          <a className="inline-flex items-center justify-center w-auto px-3 py-2.5 space-x-1 text-sm font-medium text-gray-800 transition bg-white border border-gray-200 rounded select-none focus:outline-none focus:ring-2 hover:bg-gray-100 hover:border-gray-300 focus:border-gray-300 focus:ring-gray-300">
+            Installation
+          </a>
+        </Link>
       </section>
       <main className="px-4 py-4 mx-auto max-w-7xl">
         <section className="grid grid-cols-1 gap-5 text-sm font-medium text-gray-800 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
