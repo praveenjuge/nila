@@ -1,5 +1,5 @@
 import CodeBlock from '../components/CodeBlock';
-import ProseLayout from '../components/ProseLayout';
+import ElementLayout from '../components/ElementLayout';
 
 const tailwindConfig = `// tailwind.config.js
 module.exports = {
@@ -15,7 +15,7 @@ return <Button>Button</Button>`;
 
 export default function Installation() {
   return (
-    <ProseLayout title="Installation">
+    <ElementLayout title="Installation" prose>
       <p>
         First make sure you have installed Tailwind in your project. Learn how
         to install {''}
@@ -55,6 +55,6 @@ yarn add nila"
       </p>
 
       <CodeBlock code={importButton} />
-    </ProseLayout>
+    </ElementLayout>
   );
 }

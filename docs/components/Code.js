@@ -2,12 +2,12 @@ import { useRouter } from 'next/router';
 
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
-import style from 'react-syntax-highlighter/dist/cjs/styles/prism/prism';
+import style from 'react-syntax-highlighter/dist/cjs/styles/prism/darcula';
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const PreTag = props => {
   return (
-    <pre className="p-4 overflow-x-auto font-mono text-sm text-gray-900 bg-gray-100 rounded-b">
+    <pre className="p-4 overflow-x-auto font-mono text-sm text-gray-200 bg-gray-800 rounded-b">
       {props.children}
     </pre>
   );
