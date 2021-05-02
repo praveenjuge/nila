@@ -7,8 +7,8 @@ export default function Badges() {
     <ElementLayout title="Badge">
       <Code
         code="{/* Basic */}
-<Badge>...</Badge>
-<Badge rounded>...</Badge>"
+<Badge>Badge</Badge>
+<Badge rounded>Badge</Badge>"
       >
         <Badge>Badge</Badge>
         <Badge rounded>Badge</Badge>
@@ -16,14 +16,14 @@ export default function Badges() {
 
       <Code
         code='{/* Light Colors */}
-<Badge>...</Badge>
-<Badge variant="red">...</Badge>
-<Badge variant="yellow">...</Badge>
-<Badge variant="green">...</Badge>
-<Badge variant="blue">...</Badge>
-<Badge variant="indigo">...</Badge>
-<Badge variant="purple">...</Badge>
-<Badge variant="pink">...</Badge>'
+<Badge>Badge</Badge>
+<Badge variant="red">Badge</Badge>
+<Badge variant="yellow">Badge</Badge>
+<Badge variant="green">Badge</Badge>
+<Badge variant="blue">Badge</Badge>
+<Badge variant="indigo">Badge</Badge>
+<Badge variant="purple">Badge</Badge>
+<Badge variant="pink">Badge</Badge>'
       >
         <Badge>Badge</Badge>
         <Badge variant="red">Badge</Badge>
@@ -37,14 +37,14 @@ export default function Badges() {
 
       <Code
         code='{/* Solid Colors */}
-<Badge solid>...</Badge>
-<Badge solid variant="red">...</Badge>
-<Badge solid variant="yellow">...</Badge>
-<Badge solid variant="green">...</Badge>
-<Badge solid variant="blue">...</Badge>
-<Badge solid variant="indigo">...</Badge>
-<Badge solid variant="purple">...</Badge>
-<Badge solid variant="pink">...</Badge>'
+<Badge solid>Badge</Badge>
+<Badge solid variant="red">Badge</Badge>
+<Badge solid variant="yellow">Badge</Badge>
+<Badge solid variant="green">Badge</Badge>
+<Badge solid variant="blue">Badge</Badge>
+<Badge solid variant="indigo">Badge</Badge>
+<Badge solid variant="purple">Badge</Badge>
+<Badge solid variant="pink">Badge</Badge>'
       >
         <Badge solid>Badge</Badge>
         <Badge solid variant="red">
