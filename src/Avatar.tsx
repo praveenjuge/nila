@@ -102,7 +102,7 @@ export const Avatar: React.FC<Props> = ({
     className,
     'relative flex items-center justify-center flex-shrink-0 font-bold text-gray-800 uppercase bg-gray-100 select-none',
     setSize(size),
-    setRounded(rounded),
+    setRounded(rounded)
   );
   return (
     <div {...props} role="alert" className={finalClass}>

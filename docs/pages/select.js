@@ -8,14 +8,12 @@ const basicSelect = `{/* Basic */}
   <option>Great</option>
   <option>Amazing</option>
   <option>Awesome</option>
-</Select>`
+</Select>`;
 
 export default function Selects() {
   return (
     <ElementLayout title="Select">
-      <Code
-        code={basicSelect}
-      >
+      <Code code={basicSelect}>
         <Select label="How are you?" id="basic-select">
           <option>Good</option>
           <option>Great</option>

@@ -5,8 +5,8 @@ export interface Props {
   color: string;
   variant: string;
   rounded: boolean;
-  className: string;
-  children: React.ReactNode;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const setColor = (color: string, variant: string) => {
@@ -64,11 +64,11 @@ const setColor = (color: string, variant: string) => {
 };
 
 export const Button: React.FC<Props> = ({
-  children,
+  color,
   variant,
   rounded,
+  children,
   className,
-  color,
   ...props
 }) => {
   const finalClass = classNames(

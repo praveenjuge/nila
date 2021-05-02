@@ -1,16 +1,7 @@
 import Head from 'next/head';
 import { MoonIcon } from '@heroicons/react/solid';
 import 'tailwindcss/tailwind.css';
-import Code from '../components/Code';
 import Link from 'next/link';
-
-const code = `// tailwind.config.js
-module.exports = {
-  purge: [
-    // ...
-    './node_modules/nila/src/*.tsx',
-  ],
-};`;
 
 export default function Nila({ Component, pageProps }) {
   return (
@@ -110,14 +101,6 @@ export default function Nila({ Component, pageProps }) {
           </a>
         </div>
       </header>
-
-      {/* <p className="text-base text-gray-500">
-                For proper purge and jit support for tailwind, add this in your{' '}
-                <code className="inline-flex items-center justify-center px-1 py-0.5 font-mono text-sm font-medium text-gray-700 bg-white border rounded">
-                  tailwind.config.js
-                </code>
-              </p>
-              <Code code={code} /> */}
 
       <Component {...pageProps} />
     </>

@@ -28,10 +28,7 @@ export const Select: React.FC<Props> = ({
   return (
     <>
       {label && (
-        <label
-          htmlFor={id}
-          className="flex mb-1 text-sm text-gray-700"
-        >
+        <label htmlFor={id} className="flex mb-1 text-sm text-gray-700">
           {label}
         </label>
       )}
