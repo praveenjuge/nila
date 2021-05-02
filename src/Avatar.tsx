@@ -45,19 +45,6 @@ const setDotSize = (avatarSize: string) => {
   return 'w-2 h-2 ring';
 };
 
-const setDotColor = (color: string) => {
-  if (color === 'gray') return 'bg-gray-500';
-  else if (color === 'red') return 'bg-red-500';
-  else if (color === 'yellow') return 'bg-yellow-500';
-  else if (color === 'green') return 'bg-green-500';
-  else if (color === 'blue') return 'bg-blue-500';
-  else if (color === 'indigo') return 'bg-indigo-500';
-  else if (color === 'purple') return 'bg-purple-500';
-  else if (color === 'pink') return 'bg-pink-500';
-  else if (color === 'primary') return 'bg-primary';
-  return '';
-};
-
 const renderContent = (
   image: string,
   name: string,
@@ -94,7 +81,7 @@ const renderDot = (dot: string, size: string) => {
         aria-hidden="true"
         className={classNames(
           'absolute bottom-0 right-0 rounded-full ring-white',
-          setDotColor(dot),
+          dot,
           setDotSize(size)
         )}
       />
@@ -103,19 +90,19 @@ const renderDot = (dot: string, size: string) => {
 };
 
 export const Avatar: React.FC<Props> = ({
-  className,
-  image,
-  name,
   dot,
   size,
+  name,
+  image,
   rounded,
+  className,
   ...props
 }) => {
   const finalClass = classNames(
     className,
     'relative flex items-center justify-center flex-shrink-0 font-bold text-gray-800 uppercase bg-gray-100 select-none',
     setSize(size),
-    setRounded(rounded)
+    setRounded(rounded),
   );
   return (
     <div {...props} role="alert" className={finalClass}>

@@ -21,7 +21,7 @@ export const Radio: React.FC<Props> = ({
 }) => {
   const finalClass = classNames(
     className,
-    'rounded-full border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50 cursor-pointer'
+    'transition rounded-full border-gray-300 text-gray-600 shadow-sm focus:border-gray-300 focus:ring focus:ring-offset-0 focus:ring-gray-200 focus:ring-opacity-50 cursor-pointer'
   );
   return (
     <div className="inline-flex items-center space-x-1.5">

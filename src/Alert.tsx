@@ -3,7 +3,7 @@ import { classNames, setColor } from './Utils';
 
 export interface Props {
   icon: boolean;
-  solid: boolean;
+  color: string;
   variant: string;
   closable: boolean;
   className: string;
@@ -21,18 +21,18 @@ const setIcon = (icon: boolean) => {
 };
 
 export const Alert: React.FC<Props> = ({
-  children,
-  solid,
   icon,
+  color,
+  variant,
+  children,
   closable,
   className,
-  variant,
   ...props
 }) => {
   const finalClass = classNames(
     className,
     'relative transition w-full text-sm font-medium rounded',
-    setColor(variant, solid),
+    setColor(color, variant),
     setIcon(icon),
     setPadding(closable)
   );

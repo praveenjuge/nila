@@ -23,14 +23,14 @@ export const Select: React.FC<Props> = ({
 }) => {
   const finalClass = classNames(
     className,
-    'block w-full text-sm py-2.5 rounded-md transition border-gray-200 shadow-sm focus:border-indigo-600 focus:ring focus:ring-indigo-600 focus:ring-2'
+    'block w-full text-sm py-2.5 rounded-md transition border-gray-200 shadow-sm focus:ring-2 focus:outline-none focus:border-gray-600 focus:ring-gray-600'
   );
   return (
     <>
       {label && (
         <label
           htmlFor={id}
-          className="flex mb-1 text-sm text-gray-700 cursor-pointer"
+          className="flex mb-1 text-sm text-gray-700"
         >
           {label}
         </label>

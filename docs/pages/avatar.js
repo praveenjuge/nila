@@ -11,13 +11,13 @@ export default function Avatars() {
 <Avatar name="Praveen Juge" />
 <Avatar image="/avatar.jpg" />
 <Avatar image="/avatar.jpg" rounded />
-<Avatar image="/avatar.jpg" dot="green" />'
+<Avatar image="/avatar.jpg" dot="bg-green-500" />'
       >
         <Avatar />
         <Avatar name="Praveen Juge" />
         <Avatar image="/avatar.jpg" />
         <Avatar image="/avatar.jpg" rounded />
-        <Avatar image="/avatar.jpg" dot="green" />
+        <Avatar image="/avatar.jpg" dot="bg-green-500" />
       </Code>
 
       <Code
@@ -45,48 +45,48 @@ export default function Avatars() {
 
       <Code
         code='{/* Name, Indicator Color Examples */}
-<Avatar name="Juge" dot="gray" size="6" />
-<Avatar name="Juge" dot="red" size="8" />
-<Avatar name="Juge" dot="yellow" size="10" />
-<Avatar name="Juge" dot="green" size="12" />
-<Avatar name="Juge" dot="blue" size="14" />
-<Avatar name="Juge" dot="indigo" size="16" />
-<Avatar name="Juge" dot="purple" size="20" />
-<Avatar name="Juge" dot="pink" size="24" />
-<Avatar name="Juge" dot="gray" size="28" />'
+<Avatar name="Juge" dot="bg-gray-500" size="6" />
+<Avatar name="Juge" dot="bg-red-500" size="8" />
+<Avatar name="Juge" dot="bg-yellow-500" size="10" />
+<Avatar name="Juge" dot="bg-green-500" size="12" />
+<Avatar name="Juge" dot="bg-blue-500" size="14" />
+<Avatar name="Juge" dot="bg-indigo-500" size="16" />
+<Avatar name="Juge" dot="bg-purple-500" size="20" />
+<Avatar name="Juge" dot="bg-pink-500" size="24" />
+<Avatar name="Juge" dot="bg-gray-500" size="28" />'
       >
-        <Avatar name="Juge" dot="gray" size="6" />
-        <Avatar name="Juge" dot="red" size="8" />
-        <Avatar name="Juge" dot="yellow" size="10" />
-        <Avatar name="Juge" dot="green" size="12" />
-        <Avatar name="Juge" dot="blue" size="14" />
-        <Avatar name="Juge" dot="indigo" size="16" />
-        <Avatar name="Juge" dot="purple" size="20" />
-        <Avatar name="Juge" dot="pink" size="24" />
-        <Avatar name="Juge" dot="gray" size="28" />
+        <Avatar name="Juge" dot="bg-gray-500" size="6" />
+        <Avatar name="Juge" dot="bg-red-500" size="8" />
+        <Avatar name="Juge" dot="bg-yellow-500" size="10" />
+        <Avatar name="Juge" dot="bg-green-500" size="12" />
+        <Avatar name="Juge" dot="bg-blue-500" size="14" />
+        <Avatar name="Juge" dot="bg-indigo-500" size="16" />
+        <Avatar name="Juge" dot="bg-purple-500" size="20" />
+        <Avatar name="Juge" dot="bg-pink-500" size="24" />
+        <Avatar name="Juge" dot="bg-gray-500" size="28" />
       </Code>
 
       <Code
         code='{/* Placeholder Sizes Examples */}
-<Avatar dot="gray" size="6" rounded />
-<Avatar dot="red" size="8" rounded />
-<Avatar dot="yellow" size="10" rounded />
-<Avatar dot="green" size="12" rounded />
-<Avatar dot="blue" size="14" rounded />
-<Avatar dot="indigo" size="16" rounded />
-<Avatar dot="purple" size="20" rounded />
-<Avatar dot="pink" size="24" rounded />
-<Avatar dot="gray" size="28" rounded />'
+<Avatar rounded dot="bg-gray-500" size="6" />
+<Avatar rounded dot="bg-red-500" size="8" />
+<Avatar rounded dot="bg-yellow-500" size="10" />
+<Avatar rounded dot="bg-green-500" size="12" />
+<Avatar rounded dot="bg-blue-500" size="14" />
+<Avatar rounded dot="bg-indigo-500" size="16" />
+<Avatar rounded dot="bg-purple-500" size="20" />
+<Avatar rounded dot="bg-pink-500" size="24" />
+<Avatar rounded dot="bg-gray-500" size="28" />'
       >
-        <Avatar dot="gray" size="6" rounded />
-        <Avatar dot="red" size="8" rounded />
-        <Avatar dot="yellow" size="10" rounded />
-        <Avatar dot="green" size="12" rounded />
-        <Avatar dot="blue" size="14" rounded />
-        <Avatar dot="indigo" size="16" rounded />
-        <Avatar dot="purple" size="20" rounded />
-        <Avatar dot="pink" size="24" rounded />
-        <Avatar dot="gray" size="28" rounded />
+        <Avatar rounded dot="bg-gray-500" size="6" />
+        <Avatar rounded dot="bg-red-500" size="8" />
+        <Avatar rounded dot="bg-yellow-500" size="10" />
+        <Avatar rounded dot="bg-green-500" size="12" />
+        <Avatar rounded dot="bg-blue-500" size="14" />
+        <Avatar rounded dot="bg-indigo-500" size="16" />
+        <Avatar rounded dot="bg-purple-500" size="20" />
+        <Avatar rounded dot="bg-pink-500" size="24" />
+        <Avatar rounded dot="bg-gray-500" size="28" />
       </Code>
     </ElementLayout>
   );

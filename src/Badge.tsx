@@ -2,7 +2,7 @@ import * as React from 'react';
 import { classNames, setColor, setRounded } from './Utils';
 
 export interface Props {
-  solid: boolean;
+  color: string;
   variant: string;
   rounded: boolean;
   closable: boolean;
@@ -16,18 +16,18 @@ const setPadding = (closable: boolean) => {
 };
 
 export const Badge: React.FC<Props> = ({
-  children,
-  solid,
+  color,
+  variant,
   rounded,
+  children,
   closable,
   className,
-  variant,
   ...props
 }) => {
   const finalClass = classNames(
     className,
     'px-3 py-1 text-xs font-medium',
-    setColor(variant, solid),
+    setColor(color, variant),
     setRounded(rounded),
     setPadding(closable)
   );

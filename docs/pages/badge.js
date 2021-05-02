@@ -17,55 +17,55 @@ export default function Badges() {
       <Code
         code='{/* Light Colors */}
 <Badge>Badge</Badge>
-<Badge variant="red">Badge</Badge>
-<Badge variant="yellow">Badge</Badge>
-<Badge variant="green">Badge</Badge>
-<Badge variant="blue">Badge</Badge>
-<Badge variant="indigo">Badge</Badge>
-<Badge variant="purple">Badge</Badge>
-<Badge variant="pink">Badge</Badge>'
+<Badge color="red">Badge</Badge>
+<Badge color="yellow">Badge</Badge>
+<Badge color="green">Badge</Badge>
+<Badge color="blue">Badge</Badge>
+<Badge color="indigo">Badge</Badge>
+<Badge color="purple">Badge</Badge>
+<Badge color="pink">Badge</Badge>'
       >
         <Badge>Badge</Badge>
-        <Badge variant="red">Badge</Badge>
-        <Badge variant="yellow">Badge</Badge>
-        <Badge variant="green">Badge</Badge>
-        <Badge variant="blue">Badge</Badge>
-        <Badge variant="indigo">Badge</Badge>
-        <Badge variant="purple">Badge</Badge>
-        <Badge variant="pink">Badge</Badge>
+        <Badge color="red">Badge</Badge>
+        <Badge color="yellow">Badge</Badge>
+        <Badge color="green">Badge</Badge>
+        <Badge color="blue">Badge</Badge>
+        <Badge color="indigo">Badge</Badge>
+        <Badge color="purple">Badge</Badge>
+        <Badge color="pink">Badge</Badge>
       </Code>
 
       <Code
         code='{/* Solid Colors */}
-<Badge solid>Badge</Badge>
-<Badge solid variant="red">Badge</Badge>
-<Badge solid variant="yellow">Badge</Badge>
-<Badge solid variant="green">Badge</Badge>
-<Badge solid variant="blue">Badge</Badge>
-<Badge solid variant="indigo">Badge</Badge>
-<Badge solid variant="purple">Badge</Badge>
-<Badge solid variant="pink">Badge</Badge>'
+<Badge variant="solid">Badge</Badge>
+<Badge variant="solid" color="red">Badge</Badge>
+<Badge variant="solid" color="yellow">Badge</Badge>
+<Badge variant="solid" color="green">Badge</Badge>
+<Badge variant="solid" color="blue">Badge</Badge>
+<Badge variant="solid" color="indigo">Badge</Badge>
+<Badge variant="solid" color="purple">Badge</Badge>
+<Badge variant="solid" color="pink">Badge</Badge>'
       >
-        <Badge solid>Badge</Badge>
-        <Badge solid variant="red">
+        <Badge variant="solid">Badge</Badge>
+        <Badge variant="solid" color="red">
           Badge
         </Badge>
-        <Badge solid variant="yellow">
+        <Badge variant="solid" color="yellow">
           Badge
         </Badge>
-        <Badge solid variant="green">
+        <Badge variant="solid" color="green">
           Badge
         </Badge>
-        <Badge solid variant="blue">
+        <Badge variant="solid" color="blue">
           Badge
         </Badge>
-        <Badge solid variant="indigo">
+        <Badge variant="solid" color="indigo">
           Badge
         </Badge>
-        <Badge solid variant="purple">
+        <Badge variant="solid" color="purple">
           Badge
         </Badge>
-        <Badge solid variant="pink">
+        <Badge variant="solid" color="pink">
           Badge
         </Badge>
       </Code>
