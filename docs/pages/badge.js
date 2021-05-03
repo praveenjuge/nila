@@ -5,9 +5,10 @@ import { Badge } from '../../dist';
 export default function Badges() {
   return (
     <ElementLayout title="Badge">
+      <Code title="Usage" code="import { Badge } from 'nila';" />
       <Code
-        code="{/* Basic */}
-<Badge>Badge</Badge>
+        title="Basic"
+        code="<Badge>Badge</Badge>
 <Badge rounded>Badge</Badge>"
       >
         <Badge>Badge</Badge>
@@ -15,8 +16,8 @@ export default function Badges() {
       </Code>
 
       <Code
-        code='{/* Light Colors */}
-<Badge>Badge</Badge>
+        title="Light Colors"
+        code='<Badge>Badge</Badge>
 <Badge color="red">Badge</Badge>
 <Badge color="yellow">Badge</Badge>
 <Badge color="green">Badge</Badge>
@@ -36,8 +37,8 @@ export default function Badges() {
       </Code>
 
       <Code
-        code='{/* Solid Colors */}
-<Badge variant="solid">Badge</Badge>
+        title="Solid Colors"
+        code='<Badge variant="solid">Badge</Badge>
 <Badge variant="solid" color="red">Badge</Badge>
 <Badge variant="solid" color="yellow">Badge</Badge>
 <Badge variant="solid" color="green">Badge</Badge>

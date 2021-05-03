@@ -5,9 +5,10 @@ import { Avatar } from '../../dist';
 export default function Avatars() {
   return (
     <ElementLayout title="Avatar">
+      <Code title="Usage" code="import { Avatar } from 'nila';" />
       <Code
-        code='{/* Basic */}
-<Avatar />
+        title="Basic"
+        code='<Avatar />
 <Avatar name="Praveen Juge" />
 <Avatar image="/avatar.jpg" />
 <Avatar image="/avatar.jpg" rounded />
@@ -21,8 +22,8 @@ export default function Avatars() {
       </Code>
 
       <Code
-        code='{/* Sizes */}
-<Avatar image="/avatar.jpg" size="6" />
+        title="Sizes"
+        code='<Avatar image="/avatar.jpg" size="6" />
 <Avatar image="/avatar.jpg" size="8" />
 <Avatar image="/avatar.jpg" size="10" />
 <Avatar image="/avatar.jpg" size="12" />
@@ -44,8 +45,8 @@ export default function Avatars() {
       </Code>
 
       <Code
-        code='{/* Name, Indicator Color Examples */}
-<Avatar name="Juge" dot="bg-gray-500" size="6" />
+        title="Indicator Colors"
+        code='<Avatar name="Juge" dot="bg-gray-500" size="6" />
 <Avatar name="Juge" dot="bg-red-500" size="8" />
 <Avatar name="Juge" dot="bg-yellow-500" size="10" />
 <Avatar name="Juge" dot="bg-green-500" size="12" />
@@ -67,26 +68,26 @@ export default function Avatars() {
       </Code>
 
       <Code
-        code='{/* Placeholder Sizes Examples */}
-<Avatar rounded dot="bg-gray-500" size="6" />
-<Avatar rounded dot="bg-red-500" size="8" />
-<Avatar rounded dot="bg-yellow-500" size="10" />
-<Avatar rounded dot="bg-green-500" size="12" />
-<Avatar rounded dot="bg-blue-500" size="14" />
-<Avatar rounded dot="bg-indigo-500" size="16" />
-<Avatar rounded dot="bg-purple-500" size="20" />
-<Avatar rounded dot="bg-pink-500" size="24" />
-<Avatar rounded dot="bg-gray-500" size="28" />'
+        title="Placeholder Sizes"
+        code='<Avatar rounded size="6" />
+<Avatar rounded size="8" />
+<Avatar rounded size="10" />
+<Avatar rounded size="12" />
+<Avatar rounded size="14" />
+<Avatar rounded size="16" />
+<Avatar rounded size="20" />
+<Avatar rounded size="24" />
+<Avatar rounded size="28" />'
       >
-        <Avatar rounded dot="bg-gray-500" size="6" />
-        <Avatar rounded dot="bg-red-500" size="8" />
-        <Avatar rounded dot="bg-yellow-500" size="10" />
-        <Avatar rounded dot="bg-green-500" size="12" />
-        <Avatar rounded dot="bg-blue-500" size="14" />
-        <Avatar rounded dot="bg-indigo-500" size="16" />
-        <Avatar rounded dot="bg-purple-500" size="20" />
-        <Avatar rounded dot="bg-pink-500" size="24" />
-        <Avatar rounded dot="bg-gray-500" size="28" />
+        <Avatar rounded size="6" />
+        <Avatar rounded size="8" />
+        <Avatar rounded size="10" />
+        <Avatar rounded size="12" />
+        <Avatar rounded size="14" />
+        <Avatar rounded size="16" />
+        <Avatar rounded size="20" />
+        <Avatar rounded size="24" />
+        <Avatar rounded size="28" />
       </Code>
     </ElementLayout>
   );

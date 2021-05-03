@@ -13,7 +13,8 @@ const basicSelect = `{/* Basic */}
 export default function Selects() {
   return (
     <ElementLayout title="Select">
-      <Code code={basicSelect}>
+      <Code title="Usage" code="import { Select } from 'nila';" />
+      <Code title="Basic" code={basicSelect}>
         <Select label="How are you?" id="basic-select">
           <option>Good</option>
           <option>Great</option>

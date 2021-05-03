@@ -1,4 +1,4 @@
-import CodeBlock from '../components/CodeBlock';
+import Code from '../components/Code';
 import ElementLayout from '../components/ElementLayout';
 
 const tailwindConfig = `// tailwind.config.js
@@ -30,7 +30,8 @@ export default function Installation() {
         following:
       </p>
 
-      <CodeBlock
+      <Code
+        prose
         code="npm install nila
 // or using yarn 
 yarn add nila"
@@ -47,14 +48,14 @@ yarn add nila"
         Add this in your <code>tailwind.config.js</code>:
       </p>
 
-      <CodeBlock code={tailwindConfig} />
+      <Code prose code={tailwindConfig} />
 
       <p>
         Now nila would fully work in your react projects. Let's test it by
         importing a basic button:
       </p>
 
-      <CodeBlock code={importButton} />
+      <Code prose code={importButton} />
     </ElementLayout>
   );
 }

@@ -5,9 +5,10 @@ import { Radio } from '../../dist';
 export default function Radios() {
   return (
     <ElementLayout title="Radio">
+      <Code title="Usage" code="import { Radio } from 'nila';" />
       <Code
-        code='{/* Basic */}
-<Radio label="I accept the deal." id="basic-radio" />'
+        title="Basic"
+        code='<Radio label="I accept the deal." id="basic-radio" />'
       >
         <Radio label="I accept the deal." id="basic-radio" />
       </Code>

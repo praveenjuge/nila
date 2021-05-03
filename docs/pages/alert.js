@@ -7,20 +7,17 @@ import {
   XCircleIcon,
 } from '@heroicons/react/solid';
 
-const withIcon = `{/* With Icon */}
-<Alert color="green" icon>
+const withIcon = `<Alert color="green" icon>
   <CheckCircleIcon className="flex-shrink-0 w-5 h-5" />
   <span>...</span>
 </Alert>`;
 
-const withCloseIcon = `{/* With Close Button */}
-<Alert color="blue" icon closable>
+const withCloseIcon = `<Alert color="blue" icon closable>
   <CheckCircleIcon className="flex-shrink-0 w-5 h-5" />
   <span>...</span>
 </Alert>`;
 
-const withLink = `{/* With Link */}
-<Alert color="yellow" icon>
+const withLink = `<Alert color="yellow" icon>
   <XCircleIcon className="flex-shrink-0 w-5 h-5" />
   <div className="flex flex-col justify-between w-full md:items-center md:flex-row">
     <span>...</span>
@@ -31,10 +28,8 @@ const withLink = `{/* With Link */}
 export default function Alerts() {
   return (
     <ElementLayout title="Alert">
-      <Code
-        code="{/* Basic */}
-<Alert>I'm an Alert</Alert>"
-      >
+      <Code title="Usage" code="import { Alert } from 'nila';" />
+      <Code title="Basic" code="<Alert>I'm an Alert</Alert>">
         <Alert>
           “There is nothing in the world so irresistibly contagious as laughter
           and good humor.” ― Charles Dickens, A Christmas Carol
@@ -42,6 +37,7 @@ export default function Alerts() {
       </Code>
 
       <Code
+        title="Bordered"
         code='{/* Left Border */}
 <Alert color="blue" className="border-l-4">...</Alert>
 {/* Top Border */}
@@ -57,7 +53,7 @@ export default function Alerts() {
         </Alert>
       </Code>
 
-      <Code code={withIcon}>
+      <Code title="With Icon" code={withIcon}>
         <Alert color="green" icon>
           <CheckCircleIcon className="flex-shrink-0 w-5 h-5" />
           <span>
@@ -67,7 +63,7 @@ export default function Alerts() {
         </Alert>
       </Code>
 
-      <Code code={withCloseIcon}>
+      <Code title="With Close Button" code={withCloseIcon}>
         <Alert color="blue" icon closable>
           <InformationCircleIcon className="flex-shrink-0 w-5 h-5" />
           <span>
@@ -78,7 +74,7 @@ export default function Alerts() {
         </Alert>
       </Code>
 
-      <Code code={withLink}>
+      <Code title="With Link" code={withLink}>
         <Alert color="yellow" icon>
           <XCircleIcon className="flex-shrink-0 w-5 h-5" />
           <div className="flex flex-col justify-between w-full md:items-center md:flex-row">
@@ -94,8 +90,8 @@ export default function Alerts() {
       </Code>
 
       <Code
-        code='{/* Light Colors */}
-<Alert>...</Alert>
+        title="Light Variant"
+        code='<Alert>...</Alert>
 <Alert color="red">...</Alert>
 <Alert color="yellow">...</Alert>
 <Alert color="green">...</Alert>
@@ -140,8 +136,8 @@ export default function Alerts() {
       </Code>
 
       <Code
-        code='{/* Solid Colors */}
-<Alert variant="solid">...</Alert>
+        title="Solid Variant"
+        code='<Alert variant="solid">...</Alert>
 <Alert variant="solid" color="red">...</Alert>
 <Alert variant="solid" color="yellow">...</Alert>
 <Alert variant="solid" color="green">...</Alert>

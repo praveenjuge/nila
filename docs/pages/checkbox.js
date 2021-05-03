@@ -5,9 +5,10 @@ import { Checkbox } from '../../dist';
 export default function Checkboxs() {
   return (
     <ElementLayout title="Checkbox">
+      <Code title="Usage" code="import { Checkbox } from 'nila';" />
       <Code
-        code='{/* Basic */}
-<Checkbox label="I accept the deal." id="basic-checkbox" />'
+        title="Basic"
+        code='<Checkbox label="I accept the deal." id="basic-checkbox" />'
       >
         <Checkbox label="I accept the deal." id="basic-checkbox" />
       </Code>

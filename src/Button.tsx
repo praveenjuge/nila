@@ -2,6 +2,7 @@ import * as React from 'react';
 import { classNames } from './Utils';
 
 export interface Props {
+  size: string;
   color: string;
   variant: string;
   rounded: boolean;
@@ -63,7 +64,16 @@ const setColor = (color: string, variant: string) => {
   return 'text-gray-800 bg-white hover:bg-gray-100 border-gray-200 hover:border-gray-300 focus:border-gray-300 focus:ring-gray-300';
 };
 
+const setSize = (size: string) => {
+  if (size === 'xs') return 'px-2 py-1 text-xs';
+  if (size === 'sm') return 'px-2 py-1 text-sm';
+  if (size === 'lg') return 'px-4 py-3 text-base';
+  if (size === 'xl') return 'px-5 py-4 text-lg';
+  return 'px-3 py-2 text-sm';
+};
+
 export const Button: React.FC<Props> = ({
+  size,
   color,
   variant,
   rounded,
@@ -73,8 +83,9 @@ export const Button: React.FC<Props> = ({
 }) => {
   const finalClass = classNames(
     className,
-    'w-auto inline-flex items-center justify-center px-3 py-2 space-x-1 text-sm font-medium transition border rounded select-none focus:outline-none focus:ring-2',
-    setColor(color, variant)
+    'w-auto inline-flex items-center justify-center space-x-1 font-medium transition border rounded select-none focus:outline-none focus:ring-2',
+    setColor(color, variant),
+    setSize(size)
   );
   return (
     <button {...props} className={finalClass}>

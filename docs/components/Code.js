@@ -1,13 +1,19 @@
+import React, { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import style from 'react-syntax-highlighter/dist/cjs/styles/prism/darcula';
+import { Button } from '../../dist';
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const PreTag = props => {
   return (
-    <pre className="p-4 overflow-x-auto font-mono text-sm text-gray-200 bg-gray-800 rounded-b">
+    <pre
+      className={
+        '!my-0 p-4 overflow-x-auto font-mono text-sm text-gray-200 bg-gray-800 ' +
+        (props.preview ? 'rounded-b' : 'rounded')
+      }
+    >
       {props.children}
     </pre>
   );
@@ -25,32 +31,65 @@ const getClassName = router => {
 };
 
 export default function Code(props) {
+  const [copySuccess, setCopySuccess] = useState('Copy');
+  const textAreaRef = useRef(null);
   const router = useRouter();
+
+  function copyToClipboard(e) {
+    textAreaRef.current.select();
+    document.execCommand('copy');
+    e.target.focus();
+    setCopySuccess('Copied!');
+    setTimeout(function() {
+      setCopySuccess('Copy');
+    }, 1500);
+  }
+
   return (
-    <div className="mb-16 bg-white border rounded">
+    <div className={props.prose ? '' : 'mb-16'}>
       {props.title && (
-        <h3 className="px-4 pt-3.5 text-sm font-medium text-gray-800">
+        <h2 className="font-bold tracking-tight mb-2.5 text-xl text-gray-900">
           {props.title}
-        </h3>
+        </h2>
       )}
-      {props.children && (
-        <div
-          className={
-            'flex items-end justify-start px-4 py-4 overflow-x-auto ' +
-            getClassName(router)
-          }
-        >
-          {props.children}
+      <div className="border bg-white rounded">
+        {props.children && (
+          <div
+            className={
+              'flex items-end justify-start px-4 py-4 overflow-x-auto rounded ' +
+              getClassName(router)
+            }
+          >
+            {props.children}
+          </div>
+        )}
+        <div className="relative">
+          <SyntaxHighlighter
+            language="jsx"
+            style={style}
+            PreTag={PreTag}
+            CodeTag={CodeTag}
+            title={props.title}
+            preview={props.children}
+          >
+            {props.code}
+          </SyntaxHighlighter>
+          <Button
+            size="xs"
+            color="gray"
+            className="absolute top-2 right-2"
+            onClick={copyToClipboard}
+          >
+            {copySuccess}
+          </Button>
+          <textarea
+            readOnly
+            className="sr-only"
+            ref={textAreaRef}
+            value={props.code}
+          />
         </div>
-      )}
-      <SyntaxHighlighter
-        language="jsx"
-        style={style}
-        PreTag={PreTag}
-        CodeTag={CodeTag}
-      >
-        {props.code}
-      </SyntaxHighlighter>
+      </div>
     </div>
   );
 }
