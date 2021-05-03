@@ -7,7 +7,7 @@ export default function ElementLayout({ title, children, prose }) {
       <Head>
         <title>{title} | UI Elements for React with Tailwind CSS | Nila</title>
       </Head>
-      <section className="grid gap-10 grid-cols-6 mx-auto max-w-7xl px-4 py-8">
+      <section className="grid gap-10 grid-cols-6 mx-auto max-w-7xl px-4 pt-8 pb-16">
         <Sidebar />
         <main className="col-span-full md:col-span-5">
           <div className="prose max-w-none">

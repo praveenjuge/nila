@@ -4,24 +4,21 @@ import { classNames } from './Utils';
 export interface Props {
   id: string;
   label: string;
-  solid: boolean;
-  rounded: boolean;
-  closable: boolean;
+  color: string;
   className: string;
 }
 
 export const Checkbox: React.FC<Props> = ({
   id,
-  solid,
-  rounded,
-  closable,
-  className,
   label,
+  color,
+  className,
   ...props
 }) => {
   const finalClass = classNames(
     className,
-    'transition rounded border-gray-300 text-gray-600 shadow-sm focus:border-gray-300 focus:ring focus:ring-offset-0 focus:ring-gray-200 focus:ring-opacity-50 cursor-pointer'
+    'transition rounded shadow-sm focus:ring focus:ring-offset-0 focus:ring-opacity-75 cursor-pointer border-gray-300 focus:border-gray-300 focus:ring-gray-200',
+    color ? color : 'text-gray-600'
   );
   return (
     <div className="inline-flex items-center space-x-1.5">

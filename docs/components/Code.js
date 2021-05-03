@@ -27,6 +27,8 @@ const getClassName = router => {
   if (router.asPath === '/alert') return 'flex-col space-y-2';
   else if (router.asPath === '/input' || router.asPath === '/select')
     return 'flex-col max-w-md mx-auto !items-start';
+  else if (router.asPath === '/checkbox')
+    return 'flex-col max-w-xs mx-auto !items-start md:px-20 space-y-2';
   else return 'space-x-2 md:justify-center';
 };
 
@@ -48,7 +50,7 @@ export default function Code(props) {
   return (
     <div className={props.prose ? '' : 'mb-16'}>
       {props.title && (
-        <h2 className="font-bold tracking-tight mb-2.5 text-xl text-gray-900">
+        <h2 className="font-bold tracking-tight mb-2.5 text-2xl text-gray-900">
           {props.title}
         </h2>
       )}
@@ -84,6 +86,7 @@ export default function Code(props) {
           </Button>
           <textarea
             readOnly
+            tabIndex="-1"
             className="sr-only"
             ref={textAreaRef}
             value={props.code}
