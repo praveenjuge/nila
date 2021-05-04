@@ -10,7 +10,7 @@ For full documentation go to the [documentation website](https://nila.vercel.app
 
 ## Development
 
-```sh
+```shell
 # 1. Clone the repo locally
 git clone https://github.com/praveenjuge/nila.git
 
