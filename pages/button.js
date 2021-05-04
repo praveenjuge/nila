@@ -1,6 +1,6 @@
 import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import { Button } from '../../dist';
+import { Button } from '../dist';
 
 export default function Buttons() {
   return (

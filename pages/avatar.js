@@ -1,6 +1,6 @@
 import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import { Avatar } from '../../dist';
+import { Avatar } from '../dist';
 
 export default function Avatars() {
   return (

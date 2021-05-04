@@ -1,6 +1,6 @@
 import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import { Input } from '../../dist';
+import { Input } from '../dist';
 
 export default function Inputs() {
   return (

@@ -29,8 +29,11 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
+    "dev": "next dev",
+    "build": "tsdx build && next build",
+    "start": "next start",
+    "start-tsdx": "tsdx watch --tsconfig ./ts.config.js",
+    "build-tsdx": "tsdx build --tsconfig ./ts.config.js",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
@@ -62,15 +65,29 @@
     }
   ],
   "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.12.13",
+    "@heroicons/react": "^1.0.1",
     "@size-limit/preset-small-lib": "^4.10.2",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",
+    "autoprefixer": "^10.2.5",
     "husky": "^6.0.0",
+    "microbundle": "^0.13.0",
+    "next": "10.2.0",
+    "postcss": "^8.2.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-syntax-highlighter": "^15.4.3",
     "size-limit": "^4.10.2",
+    "tailwindcss": "^2.1.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13"
   }
 }

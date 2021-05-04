@@ -1,6 +1,6 @@
 import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import { Badge } from '../../dist';
+import { Badge } from '../dist';
 
 export default function Badges() {
   return (

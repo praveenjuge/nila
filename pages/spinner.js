@@ -1,5 +1,5 @@
 import Code from '../components/Code';
-import { Spinner } from '../../dist';
+import { Spinner } from '../dist';
 import ElementLayout from '../components/ElementLayout';
 
 export default function Spinners() {

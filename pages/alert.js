@@ -1,6 +1,6 @@
 import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import { Alert } from '../../dist';
+import { Alert } from '../dist';
 import {
   CheckCircleIcon,
   InformationCircleIcon,

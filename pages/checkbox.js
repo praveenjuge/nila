@@ -1,6 +1,6 @@
 import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import { Checkbox } from '../../dist';
+import { Checkbox } from '../dist';
 
 export default function Checkboxs() {
   return (

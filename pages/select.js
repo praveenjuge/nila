@@ -1,6 +1,6 @@
 import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import { Select } from '../../dist';
+import { Select } from '../dist';
 
 const basicSelect = `{/* Basic */}
 <Select label="How are you?" id="basic-select">

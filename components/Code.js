@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import style from 'react-syntax-highlighter/dist/cjs/styles/prism/darcula';
-import { Button } from '../../dist';
+import { Button } from '../dist';
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const PreTag = props => {

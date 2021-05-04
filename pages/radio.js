@@ -1,6 +1,6 @@
 import ElementLayout from '../components/ElementLayout';
 import Code from '../components/Code';
-import { Radio } from '../../dist';
+import { Radio } from '../dist';
 
 export default function Radios() {
   return (
