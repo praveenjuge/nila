@@ -8,6 +8,32 @@ UI Elements for React with TailwindCSS
 
 For full documentation go to the [documentation website](https://nila.vercel.app/).
 
+## Development
+
+```sh
+# 1. Clone the repo locally
+git clone https://github.com/praveenjuge/nila.git
+
+# 2. Go into the nila folder
+cd nila
+
+# 3. Install dependencies
+npm install
+
+# 4. To build and watch nila packages, run
+npm run start-tsdx
+
+# 5. For docs site, run the following in a new terminal window
+npm run dev
+```
+
+Open [`http://localhost:3000`](http://localhost:3000) in your browser.
+
+| Scripts              | Description                       |
+| -------------------- | --------------------------------- |
+| `npm run start-tsdx` | Starts a watcher for the packages |
+| `npm run dev`        | Starts a docs Next.js server      |
+
 ## License
 
 MIT © [Praveen Juge](https://github.com/praveenjuge)
