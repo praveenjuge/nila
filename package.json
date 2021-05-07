@@ -45,7 +45,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "tsdx lint && npm run test"
     }
   },
   "prettier": {
@@ -69,12 +69,13 @@
     "@size-limit/preset-small-lib": "^4.10.2",
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/typography": "^0.4.0",
-    "@types/react": "^17.0.4",
+    "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.3",
     "autoprefixer": "^10.2.5",
+    "clsx": "^1.1.1",
     "husky": "^6.0.0",
     "next": "10.2.0",
-    "postcss": "^8.2.13",
+    "postcss": "^8.2.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-syntax-highlighter": "^15.4.3",

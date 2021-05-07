@@ -10,7 +10,7 @@ const PreTag = props => {
   return (
     <pre
       className={
-        '!my-0 p-4 overflow-x-auto font-mono text-sm text-gray-200 bg-gray-800 ' +
+        '!my-0 py-4 pl-4 pr-16 md:pr-4 overflow-x-auto font-mono text-sm text-gray-200 bg-gray-800 ' +
         (props.preview ? 'rounded-b' : 'rounded')
       }
     >

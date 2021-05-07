@@ -1,13 +1,12 @@
-import * as React from 'react';
-import { classNames } from './Utils';
+import React from 'react';
+import cx from 'clsx';
+import { ComponentPassThrough } from './Utils';
 
-export interface Props {
-  size: string;
-  color: string;
-  variant: string;
-  rounded: boolean;
-  className?: string;
-  children?: React.ReactNode;
+interface ButtonBaseProps {
+  color?: string;
+  type?: 'submit' | 'button' | 'reset';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'link' | 'solid' | 'outline' | 'light';
 }
 
 const setColor = (color: string, variant: string) => {
@@ -72,24 +71,38 @@ const setSize = (size: string) => {
   return 'px-3 py-2 text-sm';
 };
 
-export const Button: React.FC<Props> = ({
-  size,
+export function Button<
+  T extends React.ElementType = 'button',
+  U extends HTMLElement = HTMLButtonElement
+>({
   color,
-  variant,
-  rounded,
   children,
   className,
-  ...props
-}) => {
-  const finalClass = classNames(
-    className,
-    'w-auto inline-flex items-center justify-center space-x-1 font-medium transition border rounded select-none focus:outline-none focus:ring-2',
-    setColor(color, variant),
-    setSize(size)
-  );
+  elementRef,
+  size = 'md',
+  type = 'button',
+  disabled = false,
+  variant = 'solid',
+  as: Element = 'button',
+  ...others
+}: ComponentPassThrough<T, ButtonBaseProps> & {
+  elementRef?: React.ForwardedRef<U>;
+}) {
   return (
-    <button {...props} className={finalClass}>
+    <Element
+      {...others}
+      type={type}
+      disabled={disabled}
+      ref={elementRef}
+      onTouchStart={() => {}}
+      className={cx(
+        className,
+        'w-auto inline-flex items-center justify-center space-x-1 font-medium transition border rounded cursor-pointer select-none focus:outline-none focus:ring-2',
+        setColor(color, variant),
+        setSize(size)
+      )}
+    >
       {children}
-    </button>
+    </Element>
   );
-};
+}

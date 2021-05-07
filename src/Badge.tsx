@@ -1,13 +1,12 @@
-import * as React from 'react';
-import { classNames, setColor, setRounded } from './Utils';
+import React from 'react';
+import cx from 'clsx';
+import { ComponentPassThrough, setColor, setRounded } from './Utils';
 
-export interface Props {
-  color: string;
-  variant: string;
-  rounded: boolean;
-  closable: boolean;
-  className: string;
-  children: React.ReactNode;
+interface BadgeProps {
+  color?: string;
+  rounded?: boolean;
+  closable?: boolean;
+  variant?: 'light' | 'solid' | 'outline';
 }
 
 const setPadding = (closable: boolean) => {
@@ -15,24 +14,27 @@ const setPadding = (closable: boolean) => {
   return 'p-4';
 };
 
-export const Badge: React.FC<Props> = ({
+export function Badge<T extends React.ElementType = 'span'>({
   color,
-  variant,
   rounded,
   children,
   closable,
   className,
-  ...props
-}) => {
-  const finalClass = classNames(
-    className,
-    'px-3 py-1 text-xs font-medium',
-    setColor(color, variant),
-    setRounded(rounded),
-    setPadding(closable)
-  );
+  variant = 'light',
+  as: Element = 'span',
+  ...others
+}: ComponentPassThrough<T, BadgeProps>) {
   return (
-    <span {...props} className={finalClass}>
+    <Element
+      {...others}
+      className={cx(
+        className,
+        'px-3 py-1 text-xs font-medium',
+        setColor(color, variant),
+        setRounded(rounded),
+        setPadding(closable)
+      )}
+    >
       {children}
       {closable && (
         <button
@@ -54,6 +56,6 @@ export const Badge: React.FC<Props> = ({
           </svg>
         </button>
       )}
-    </span>
+    </Element>
   );
-};
+}

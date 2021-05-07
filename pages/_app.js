@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { MoonIcon } from '@heroicons/react/solid';
 import 'tailwindcss/tailwind.css';
 import Link from 'next/link';
+import { Button } from '../dist';
 
 export default function Nila({ Component, pageProps }) {
   return (
@@ -75,15 +76,15 @@ export default function Nila({ Component, pageProps }) {
       <header className="bg-white shadow-sm">
         <div className="flex items-center justify-between px-4 py-2 mx-auto max-w-7xl">
           <Link href="/">
-            <a className="text-gray-800 flex items-center space-x-0.5 text-2xl font-extrabold tracking-tight transition rounded  sm:leading-tight select-none focus:outline-none focus:ring focus:ring-blue-700">
+            <a className="text-gray-800 flex items-center space-x-0.5 text-2xl font-extrabold tracking-tight transition rounded sm:leading-tight select-none focus:outline-none focus:ring focus:ring-blue-700">
               <MoonIcon className="w-6 h-6" />
               <span>Nila</span>
             </a>
           </Link>
-          <a
+          <Button
+            as="a"
             href="https://github.com/praveenjuge/nila"
             target="_blank"
-            className="inline-flex items-center justify-center px-3 py-2 space-x-1 text-sm font-medium text-gray-900 transition bg-white border rounded select-none hover:bg-gray-100 hover:border-gray-300 focus:outline-none focus:ring-2 focus:border-blue-700 focus:ring-blue-700"
           >
             <svg
               className="flex flex-shrink-0 w-4 h-4 text-gray-800"
@@ -98,7 +99,7 @@ export default function Nila({ Component, pageProps }) {
               />
             </svg>
             <span>GitHub</span>
-          </a>
+          </Button>
         </div>
       </header>
 

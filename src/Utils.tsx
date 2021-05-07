@@ -1,3 +1,10 @@
+export type ComponentPassThrough<
+  T extends React.ElementType,
+  Props
+> = React.ComponentPropsWithoutRef<T> & {
+  component?: T;
+} & Props;
+
 export const classNames = (...classes: any[]) =>
   classes.filter(Boolean).join(' ');
 

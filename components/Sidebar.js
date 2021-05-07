@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const linkClass =
-  'px-2 py-1.5 hover:bg-gray-200 rounded transition hover:text-black flex';
+  'px-2 py-1.5 hover:bg-gray-200 rounded transition hover:text-black flex focus:outline-none focus:ring focus:ring-blue-700';
 
 export default function Sidebar(props) {
   return (
