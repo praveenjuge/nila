@@ -30,13 +30,13 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "tsdx build --tsconfig ./ts.config.js && next build",
     "start": "next start",
     "start-tsdx": "tsdx watch --tsconfig ./ts.config.js",
     "build-tsdx": "tsdx build --tsconfig ./ts.config.js",
+    "build": "npm run build-tsdx && next build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "npm run build-tsdx",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
