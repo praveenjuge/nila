@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '../dist';
 const linkClass =
-  'flex flex-col w-full overflow-hidden transition shadow-sm rounded cursor-pointer group focus:outline-none focus:ring focus:ring-blue-700 bg-white';
+  'flex flex-col w-full overflow-hidden transition shadow-sm rounded cursor-pointer group focus-visible:outline-none focus-visible:ring focus-visible:ring-blue-700 bg-white';
 
 export default function Home() {
   return (

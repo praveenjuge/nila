@@ -1,28 +1,25 @@
-import * as React from 'react';
-import { classNames } from './Utils';
+import React from 'react';
+import cx from 'clsx';
+import { DefaultProps } from './Utils';
 
-export interface Props {
-  className: string;
-}
-
-export const Spinner: React.FC<Props> = ({ children, className, ...props }) => {
+export function Spinner({ className, ...props }: DefaultProps) {
   return (
     <svg
       {...props}
-      className={classNames('animate-spin', className)}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
       width="22"
       height="22"
+      fill="none"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      className={cx('animate-spin', className)}
     >
       <circle
-        className="opacity-25"
+        r={10}
         cx={12}
         cy={12}
-        r={10}
-        stroke="currentColor"
         strokeWidth={4}
+        stroke="currentColor"
+        className="opacity-25"
       />
       <path
         fill="currentColor"
@@ -30,4 +27,4 @@ export const Spinner: React.FC<Props> = ({ children, className, ...props }) => {
       />
     </svg>
   );
-};
+}

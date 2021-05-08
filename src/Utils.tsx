@@ -1,3 +1,23 @@
+import { useRef } from 'react';
+
+export function randomId() {
+  return `nila-${Math.random()
+    .toString(36)
+    .substr(2, 9)}`;
+}
+
+export function useId(id?: string, generateId: () => string = randomId) {
+  const generatedId = useRef(generateId());
+  return id || generatedId.current;
+}
+
+export type Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
+export interface DefaultProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
 export type ComponentPassThrough<
   T extends React.ElementType,
   Props
@@ -5,10 +25,7 @@ export type ComponentPassThrough<
   component?: T;
 } & Props;
 
-export const classNames = (...classes: any[]) =>
-  classes.filter(Boolean).join(' ');
-
-export const setColor = (color: string, variant: string) => {
+export const setColor = (color?: string, variant?: string) => {
   if (variant === 'solid') {
     if (color === 'red') return 'border-red-100 text-red-100 bg-red-800';
     else if (color === 'green')
@@ -37,9 +54,4 @@ export const setColor = (color: string, variant: string) => {
     return 'border-purple-800 text-purple-800 bg-purple-100';
   else if (color === 'pink') return 'border-pink-800 text-pink-800 bg-pink-100';
   return 'border-gray-800 text-gray-800 bg-gray-100';
-};
-
-export const setRounded = (rounded: boolean) => {
-  if (rounded) return 'rounded';
-  return 'rounded-full';
 };

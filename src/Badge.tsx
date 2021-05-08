@@ -1,18 +1,13 @@
 import React from 'react';
 import cx from 'clsx';
-import { ComponentPassThrough, setColor, setRounded } from './Utils';
+import { ComponentPassThrough, DefaultProps, setColor } from './Utils';
 
-interface BadgeProps {
+interface BadgeProps extends DefaultProps {
   color?: string;
   rounded?: boolean;
   closable?: boolean;
   variant?: 'light' | 'solid' | 'outline';
 }
-
-const setPadding = (closable: boolean) => {
-  if (closable) return 'py-4 pl-4 pr-10';
-  return 'p-4';
-};
 
 export function Badge<T extends React.ElementType = 'span'>({
   color,
@@ -30,9 +25,9 @@ export function Badge<T extends React.ElementType = 'span'>({
       className={cx(
         className,
         'px-3 py-1 text-xs font-medium',
-        setColor(color, variant),
-        setRounded(rounded),
-        setPadding(closable)
+        rounded ? 'rounded' : 'rounded-full',
+        closable ? 'py-4 pl-4 pr-10' : 'px-3 py-1',
+        setColor(color, variant)
       )}
     >
       {children}

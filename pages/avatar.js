@@ -10,38 +10,38 @@ export default function Avatars() {
         title="Basic"
         code='<Avatar />
 <Avatar name="Praveen Juge" />
-<Avatar image="/avatar.jpg" />
-<Avatar image="/avatar.jpg" rounded />
-<Avatar image="/avatar.jpg" dot="bg-green-500" />'
+<Avatar src="/avatar.jpg" />
+<Avatar src="/avatar.jpg" rounded />
+<Avatar src="/avatar.jpg" dot="bg-green-500" />'
       >
         <Avatar />
         <Avatar name="Praveen Juge" />
-        <Avatar image="/avatar.jpg" />
-        <Avatar image="/avatar.jpg" rounded />
-        <Avatar image="/avatar.jpg" dot="bg-green-500" />
+        <Avatar src="/avatar.jpg" />
+        <Avatar src="/avatar.jpg" rounded />
+        <Avatar src="/avatar.jpg" dot="bg-green-500" />
       </Code>
 
       <Code
         title="Sizes"
-        code='<Avatar image="/avatar.jpg" size="6" />
-<Avatar image="/avatar.jpg" size="8" />
-<Avatar image="/avatar.jpg" size="10" />
-<Avatar image="/avatar.jpg" size="12" />
-<Avatar image="/avatar.jpg" size="14" />
-<Avatar image="/avatar.jpg" size="16" />
-<Avatar image="/avatar.jpg" size="20" />
-<Avatar image="/avatar.jpg" size="24" />
-<Avatar image="/avatar.jpg" size="28" />'
+        code='<Avatar src="/avatar.jpg" size="6" />
+<Avatar src="/avatar.jpg" size="8" />
+<Avatar src="/avatar.jpg" size="10" />
+<Avatar src="/avatar.jpg" size="12" />
+<Avatar src="/avatar.jpg" size="14" />
+<Avatar src="/avatar.jpg" size="16" />
+<Avatar src="/avatar.jpg" size="20" />
+<Avatar src="/avatar.jpg" size="24" />
+<Avatar src="/avatar.jpg" size="28" />'
       >
-        <Avatar image="/avatar.jpg" size="6" />
-        <Avatar image="/avatar.jpg" size="8" />
-        <Avatar image="/avatar.jpg" size="10" />
-        <Avatar image="/avatar.jpg" size="12" />
-        <Avatar image="/avatar.jpg" size="14" />
-        <Avatar image="/avatar.jpg" size="16" />
-        <Avatar image="/avatar.jpg" size="20" />
-        <Avatar image="/avatar.jpg" size="24" />
-        <Avatar image="/avatar.jpg" size="28" />
+        <Avatar src="/avatar.jpg" size="6" />
+        <Avatar src="/avatar.jpg" size="8" />
+        <Avatar src="/avatar.jpg" size="10" />
+        <Avatar src="/avatar.jpg" size="12" />
+        <Avatar src="/avatar.jpg" size="14" />
+        <Avatar src="/avatar.jpg" size="16" />
+        <Avatar src="/avatar.jpg" size="20" />
+        <Avatar src="/avatar.jpg" size="24" />
+        <Avatar src="/avatar.jpg" size="28" />
       </Code>
 
       <Code

@@ -76,7 +76,7 @@ export default function Nila({ Component, pageProps }) {
       <header className="bg-white shadow-sm">
         <div className="flex items-center justify-between px-4 py-2 mx-auto max-w-7xl">
           <Link href="/">
-            <a className="text-gray-800 flex items-center space-x-0.5 text-2xl font-extrabold tracking-tight transition rounded sm:leading-tight select-none focus:outline-none focus:ring focus:ring-blue-700">
+            <a className="text-gray-800 flex items-center space-x-0.5 text-2xl font-extrabold tracking-tight transition rounded sm:leading-tight select-none focus-visible:outline-none focus-visible:ring focus-visible:ring-blue-700">
               <MoonIcon className="w-6 h-6" />
               <span>Nila</span>
             </a>
@@ -85,6 +85,7 @@ export default function Nila({ Component, pageProps }) {
             as="a"
             href="https://github.com/praveenjuge/nila"
             target="_blank"
+            rel="noreferrer noopener"
           >
             <svg
               className="flex flex-shrink-0 w-4 h-4 text-gray-800"

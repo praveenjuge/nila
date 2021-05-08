@@ -1,43 +1,35 @@
-import * as React from 'react';
-import { classNames, setColor } from './Utils';
+import React from 'react';
+import cx from 'clsx';
+import { setColor, DefaultProps } from './Utils';
 
-export interface Props {
-  icon: boolean;
-  color: string;
-  variant: string;
-  closable: boolean;
-  className: string;
-  children: React.ReactNode;
+interface AlertProps extends DefaultProps {
+  icon?: boolean;
+  color?: string;
+  closable?: boolean;
+  variant?: 'light' | 'solid' | 'outline';
 }
 
-const setPadding = (closable: boolean) => {
-  if (closable) return 'py-4 pl-4 pr-10';
-  return 'p-4';
-};
-
-const setIcon = (icon: boolean) => {
-  if (icon) return 'flex space-x-2.5';
-  return '';
-};
-
-export const Alert: React.FC<Props> = ({
+export function Alert({
   icon,
   color,
-  variant,
   children,
   closable,
   className,
-  ...props
-}) => {
-  const finalClass = classNames(
-    className,
-    'relative transition w-full text-sm font-medium rounded',
-    setColor(color, variant),
-    setIcon(icon),
-    setPadding(closable)
-  );
+  variant = 'light',
+  ...others
+}: AlertProps) {
   return (
-    <div {...props} role="alert" className={finalClass}>
+    <div
+      {...others}
+      role="alert"
+      className={cx(
+        className,
+        'relative transition w-full text-sm font-medium rounded',
+        closable ? 'py-4 pl-4 pr-10' : 'p-4',
+        icon ? 'flex space-x-2.5' : '',
+        setColor(color, variant)
+      )}
+    >
       {children}
       {closable && (
         <button
@@ -61,4 +53,4 @@ export const Alert: React.FC<Props> = ({
       )}
     </div>
   );
-};
+}

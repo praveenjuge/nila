@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'clsx';
-import { ComponentPassThrough } from './Utils';
+import { ComponentPassThrough, DefaultProps, Sizes } from './Utils';
 
-interface ButtonBaseProps {
+interface ButtonBaseProps extends DefaultProps {
   color?: string;
   type?: 'submit' | 'button' | 'reset';
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  size?: Sizes;
   variant?: 'link' | 'solid' | 'outline' | 'light';
 }
 
