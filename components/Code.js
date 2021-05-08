@@ -1,16 +1,48 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
 import style from 'react-syntax-highlighter/dist/cjs/styles/prism/darcula';
+import { CheckIcon, DuplicateIcon } from '@heroicons/react/solid';
 import { Button } from '../dist';
 SyntaxHighlighter.registerLanguage('jsx', jsx);
+
+function useClipboard({ timeout = 1500 } = {}) {
+  const [error, setError] = useState();
+  const [copied, setCopied] = useState(false);
+  const [copyTimeout, setCopyTimeout] = useState(null);
+
+  const handleCopyResult = value => {
+    clearTimeout(copyTimeout);
+    setCopyTimeout(setTimeout(() => setCopied(false), timeout));
+    setCopied(value);
+  };
+
+  const copy = valueToCopy => {
+    if ('clipboard' in navigator) {
+      navigator.clipboard
+        .writeText(valueToCopy)
+        .then(() => handleCopyResult(true))
+        .catch(err => setError(err));
+    } else {
+      setError(console.log('Clipboard is not supported'));
+    }
+  };
+
+  const reset = () => {
+    setCopied(false);
+    setError(null);
+    clearTimeout(copyTimeout);
+  };
+
+  return { copy, reset, error, copied };
+}
 
 const PreTag = props => {
   return (
     <pre
       className={
-        '!my-0 py-4 pl-4 pr-16 md:pr-4 overflow-x-auto font-mono text-sm text-gray-200 bg-gray-800 ' +
+        '!my-0 py-4 pl-4 pr-12 md:pr-4 overflow-x-auto font-mono text-sm text-gray-200 bg-gray-800 ' +
         (props.preview ? 'rounded-b' : 'rounded')
       }
     >
@@ -33,19 +65,8 @@ const getClassName = router => {
 };
 
 export default function Code(props) {
-  const [copySuccess, setCopySuccess] = useState('Copy');
-  const textAreaRef = useRef(null);
+  const clipboard = useClipboard();
   const router = useRouter();
-
-  function copyToClipboard(e) {
-    textAreaRef.current.select();
-    document.execCommand('copy');
-    e.target.focus();
-    setCopySuccess('Copied!');
-    setTimeout(function() {
-      setCopySuccess('Copy');
-    }, 1500);
-  }
 
   return (
     <div className={props.prose ? '' : 'mb-16'}>
@@ -79,18 +100,15 @@ export default function Code(props) {
           <Button
             size="xs"
             color="gray"
-            className="absolute top-2 right-2"
-            onClick={copyToClipboard}
+            className="absolute top-2 right-2 !px-1.5"
+            onClick={() => clipboard.copy(props.code)}
           >
-            {copySuccess}
+            {clipboard.copied ? (
+              <CheckIcon className="h-4 w-4" />
+            ) : (
+              <DuplicateIcon className="h-4 w-4" />
+            )}
           </Button>
-          <textarea
-            readOnly
-            tabIndex="-1"
-            className="sr-only"
-            ref={textAreaRef}
-            value={props.code}
-          />
         </div>
       </div>
     </div>

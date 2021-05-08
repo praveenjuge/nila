@@ -9,10 +9,6 @@ module.exports = {
   ],
 };`;
 
-const importButton = `import { Button } from 'nila'; 
-// ... 
-return <Button>Button</Button>`;
-
 const formConfig = `// tailwind.config.js
 module.exports = {
   plugins: [
@@ -91,12 +87,6 @@ yarn add @tailwindcss/forms"
       </p>
       <Code prose code={formConfig} />
       <p>That's all ✨</p>
-      <h2>Usage</h2>
-      <p>
-        Now nila would fully work in your react projects. Let's test it by
-        importing a basic button:
-      </p>
-      <Code prose code={importButton} />
       <h2>Optional: Fonts and Base Class</h2>
       <p>
         We use Inter font in this docs site, to use it you can add the following

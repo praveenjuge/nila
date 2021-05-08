@@ -6,11 +6,8 @@ export default function Radios() {
   return (
     <ElementLayout title="Radio">
       <Code title="Usage" code="import { Radio } from 'nila';" />
-      <Code
-        title="Basic"
-        code='<Radio label="I accept the deal." id="basic-radio" />'
-      >
-        <Radio label="I accept the deal." id="basic-radio" />
+      <Code title="Basic" code='<Radio label="I accept the deal." />'>
+        <Radio label="I accept the deal." />
       </Code>
     </ElementLayout>
   );

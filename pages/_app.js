@@ -68,12 +68,11 @@ export default function Nila({ Component, pageProps }) {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
 
-      <div
-        aria-hidden="true"
-        className="w-full h-1.5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
-      ></div>
-
-      <header className="bg-white shadow-sm">
+      <header className="bg-white shadow-sm fixed w-full top-0 left-0 right-0 z-10">
+        <div
+          aria-hidden="true"
+          className="w-full h-1.5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+        ></div>
         <div className="flex items-center justify-between px-4 py-2 mx-auto max-w-7xl">
           <Link href="/">
             <a className="text-gray-800 flex items-center space-x-0.5 text-2xl font-extrabold tracking-tight transition rounded sm:leading-tight select-none focus-visible:outline-none focus-visible:ring focus-visible:ring-blue-700">
@@ -104,7 +103,9 @@ export default function Nila({ Component, pageProps }) {
         </div>
       </header>
 
-      <Component {...pageProps} />
+      <div className="pt-16">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
